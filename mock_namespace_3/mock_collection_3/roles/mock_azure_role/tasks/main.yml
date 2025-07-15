@@ -51,13 +51,16 @@
         vault_uri: "{{ key_vault_url }}"
         name: "{{ secret_name }}"
       register: kvSecret
-    - debug:
+    - ansible.builtin.debug:
         msg: "{{ kvSecret }}"
     - name: set secret fact
-      set_fact: secretValue="{{ kvSecret['secrets'][0]['secret'] }}"
+      ansible.builtin.set_fact:
+        secretValue: "{{ kvSecret['secrets'][0]['secret'] }}"
     
-    - debug:
+    - ansible.builtin.debug:
         msg: "{{ secretValue }}"
     - name: Set key vault secret fact
-      ansible.builtin.set_fact:        
-        secretValue={{ lookup('azure.azcollection.azure_keyvault_secret', secret_name, vault_url=key_vault_url, client_id=azure_client_id, secret=azure_client_secret, tenant_id=azure_tenant_id) }}
+      ansible.builtin.set_fact:
+        secretValue: "{{ lookup('azure.azcollection.azure_keyvault_secret', secret_name, vault_url=key_vault_url,
+          client_id=azure_client_id, secret=azure_client_secret, tenant_id=azure_tenant_id)
+          }}"
