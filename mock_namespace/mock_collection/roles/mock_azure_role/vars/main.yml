@@ -1,2 +1,7 @@
 ---
 # vars file for mock_azure_role
+azure_client_secret: "mock_client_secret"
+secret_name: demosecret101
+
+secret_name_2: MySecret
+secret_value_2: "mock_secret_value"  # Mock secret value

@@ -4,11 +4,7 @@
 - name: Add user accounts
   hosts: 192.158.1.38 
   vars:
-    users:
-      - username: customer1
-        password: 'customer1_password'
-      - username: customer2
-        password: 'customer2_password'
+    users: "{{ users }}"
   tasks:
     - name: Add user accounts
       ansible.builtin.user:

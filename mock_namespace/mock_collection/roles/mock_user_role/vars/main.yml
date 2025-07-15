@@ -1,2 +1,7 @@
 ---
 # vars file for mock_user_role
+users:
+  - username: customer1
+    password: 'customer1_password'
+  - username: customer2
+    password: 'customer2_password'

@@ -1,20 +1,13 @@
 Scanning...success. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
 
 Check results:
-mock_namespace/mock_collection/roles/mock_azure_role/tasks/main.yml:3:3: ERROR: [E3301] Hardcoded secret detected inside play. Field: vars.azure_client_secret. Use variable or Ansible Vault instead.
-mock_namespace/mock_collection/roles/mock_azure_role/tasks/main.yml:3:3: ERROR: [E3301] Hardcoded secret detected inside play. Field: vars.secret_name. Use variable or Ansible Vault instead.
 mock_namespace/mock_collection/roles/mock_azure_role/tasks/main.yml:19:7: ERROR: [E001] dest is not a valid parameter in module azure.azcollection.azure_rm_keyvaultsecret. View docs at https://spotter.steampunk.si/plugin-docs/azure/azcollection/azure_rm_keyvaultsecret/3.4.0/module/ for more info.
-mock_namespace/mock_collection/roles/mock_azure_role/tasks/main.yml:36:7: ERROR: [E3300] Hardcoded secret detected inside task. Field: azure.azcollection.azure_rm_keyvaultsecret.secret_name. Use variable or Ansible Vault instead.
-mock_namespace/mock_collection/roles/mock_azure_role/tasks/main.yml:36:7: ERROR: [E3300] Hardcoded secret detected inside task. Field: azure.azcollection.azure_rm_keyvaultsecret.secret_value. Use variable or Ansible Vault instead.
-mock_namespace/mock_collection/roles/mock_email_role/tasks/main.yml:4:3: ERROR: [E3301] Hardcoded secret detected inside play. Field: vars.smtp_password. Use variable or Ansible Vault instead.
 mock_namespace/mock_collection/roles/mock_osi_role/tasks/main.yml:4:3: ERROR: [E2000] Dashes should be avoided in hostnames. Used in hostname: customer-X-osi-app-server.
-mock_namespace/mock_collection/roles/mock_user_role/tasks/main.yml:4:3: ERROR: [E3301] Hardcoded secret detected inside play. Field: vars.users[0].password. Use variable or Ansible Vault instead.
-mock_namespace/mock_collection/roles/mock_user_role/tasks/main.yml:4:3: ERROR: [E3301] Hardcoded secret detected inside play. Field: vars.users[1].password. Use variable or Ansible Vault instead.
 
 Scan summary:
-Spotter took 3.607 s to scan your input. 56 file(s) scanned, 0 path(s) skipped.
-It resulted in 9 error(s), 14 warning(s) and 34 hint(s).
+Spotter took 2.010 s to scan your input. 56 file(s) scanned, 0 path(s) skipped.
+It resulted in 2 error(s), 14 warning(s) and 44 hint(s).
 Can rewrite 0 file(s) with 0 change(s).
 Overall status: ERROR
-Visit https://spotter.steampunk.si/organization/-vI8qeCGT4qioXo_zKQRNg/projects/K2IyUawST3SL3j86IjDThA/scans/ESkkr4n2QXuOT4_erdSvtw/ to view this scan result.
+Visit https://spotter.steampunk.si/organization/-vI8qeCGT4qioXo_zKQRNg/projects/K2IyUawST3SL3j86IjDThA/scans/AUJ_C1T0Q16FN8swJ9MizQ/ to view this scan result.
 
