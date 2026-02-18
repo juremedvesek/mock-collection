@@ -8,11 +8,11 @@
     ansible_python_interpreter: /home/myusername123/pyvirt/azure/bin/python
     azure_subscription_id: "12345678-1234-1234-1234-123456789abc"
     azure_client_id: "87654321-4321-4321-4321-abcdefabcdef"
-    azure_client_secret: "mock_client_secret"
+    azure_client_secret: "{{ azure_client_secret }}"
     azure_tenant_id: "tenant_id_example"
     key_vault_name: ansible-demo-123
     key_vault_url: https://ansible-demo-123.vault.azure.net/
-    secret_name: demosecret101
+    secret_name: "{{ secret_name }}"
     secret_dest: "/tmp/mock_secret"  # Mock path to save secret
 
   tasks:
@@ -35,8 +35,8 @@
 
     - name: Create a secret
       azure.azcollection.azure_rm_keyvaultsecret:        
-        secret_name: MySecret
-        secret_value: "mock_secret_value"  # Mock secret value
+        secret_name: "{{ secret_name_2 }}"
+        secret_value: "{{ secret_value_2 }}"  # Mock secret value
         keyvault_uri: https://ansible-demo-123.vault.azure.net/        
         tags:
             testing: "mock_testing"
@@ -51,13 +51,16 @@
         vault_uri: "{{ key_vault_url }}"
         name: "{{ secret_name }}"
       register: kvSecret
-    - debug:
+    - ansible.builtin.debug:
         msg: "{{ kvSecret }}"
     - name: set secret fact
-      set_fact: secretValue="{{ kvSecret['secrets'][0]['secret'] }}"
+      ansible.builtin.set_fact:
+        secretValue: "{{ kvSecret['secrets'][0]['secret'] }}"
     
-    - debug:
+    - ansible.builtin.debug:
         msg: "{{ secretValue }}"
     - name: Set key vault secret fact
-      ansible.builtin.set_fact:        
-        secretValue={{ lookup('azure.azcollection.azure_keyvault_secret', secret_name, vault_url=key_vault_url, client_id=azure_client_id, secret=azure_client_secret, tenant_id=azure_tenant_id) }}
+      ansible.builtin.set_fact:
+        secretValue: "{{ lookup('azure.azcollection.azure_keyvault_secret', secret_name, vault_url=key_vault_url,
+          client_id=azure_client_id, secret=azure_client_secret, tenant_id=azure_tenant_id)
+          }}"

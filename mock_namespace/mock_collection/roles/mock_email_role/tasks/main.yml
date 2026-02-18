@@ -5,7 +5,7 @@
   hosts: mail_servers
   vars:
     email_user: 'alert@customer.com'
-    smtp_password: 'secure_password'
+    smtp_password: "{{ smtp_password }}"
   tasks:
     - name: Configure SMTP settings
       ansible.builtin.copy:

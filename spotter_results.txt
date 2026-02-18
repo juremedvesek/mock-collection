@@ -1,0 +1,25 @@
+Scanning...success. ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+
+Check results:
+mock_namespace/mock_collection/roles/mock_api_role/vars/main.yml:4:1: ERROR: [E2309::VARS_PREFIX] Variable customer_password does not start with prefix mock_api_role.
+mock_namespace/mock_collection/roles/mock_api_role/vars/main.yml:4:1: ERROR: [E2309::VARS_PREFIX] Variable customer_user does not start with prefix mock_api_role.
+mock_namespace/mock_collection/roles/mock_azure_role/tasks/main.yml:19:7: ERROR: [E001] dest is not a valid parameter in module azure.azcollection.azure_rm_keyvaultsecret. View docs at https://spotter.steampunk.si/plugin-docs/azure/azcollection/azure_rm_keyvaultsecret/3.4.0/module/ for more info.
+mock_namespace/mock_collection/roles/mock_azure_role/vars/main.yml:3:1: ERROR: [E2309::VARS_PREFIX] Variable azure_client_secret does not start with prefix mock_azure_role.
+mock_namespace/mock_collection/roles/mock_azure_role/vars/main.yml:3:1: ERROR: [E2309::VARS_PREFIX] Variable secret_name does not start with prefix mock_azure_role.
+mock_namespace/mock_collection/roles/mock_azure_role/vars/main.yml:3:1: ERROR: [E2309::VARS_PREFIX] Variable secret_name_2 does not start with prefix mock_azure_role.
+mock_namespace/mock_collection/roles/mock_azure_role/vars/main.yml:3:1: ERROR: [E2309::VARS_PREFIX] Variable secret_value_2 does not start with prefix mock_azure_role.
+mock_namespace/mock_collection/roles/mock_email_role/vars/main.yml:3:1: ERROR: [E2309::VARS_PREFIX] Variable smtp_password does not start with prefix mock_email_role.
+mock_namespace/mock_collection/roles/mock_osi_role/tasks/main.yml:4:3: ERROR: [E2000] Dashes should be avoided in hostnames. Used in hostname: customer-X-osi-app-server.
+mock_namespace/mock_collection/roles/mock_osi_role/vars/main.yml:4:1: ERROR: [E2309::VARS_PREFIX] Variable osi_app_env does not start with prefix mock_osi_role.
+mock_namespace/mock_collection/roles/mock_osi_role/vars/main.yml:4:1: ERROR: [E2309::VARS_PREFIX] Variable osi_app_name does not start with prefix mock_osi_role.
+mock_namespace/mock_collection/roles/mock_osi_role/vars/main.yml:4:1: ERROR: [E2309::VARS_PREFIX] Variable osi_app_port does not start with prefix mock_osi_role.
+mock_namespace/mock_collection/roles/mock_osi_role/vars/main.yml:4:1: ERROR: [E2309::VARS_PREFIX] Variable osi_app_version does not start with prefix mock_osi_role.
+mock_namespace/mock_collection/roles/mock_user_role/vars/main.yml:3:1: ERROR: [E2309::VARS_PREFIX] Variable users does not start with prefix mock_user_role.
+
+Scan summary:
+Spotter took 1.314 s to scan your input. 56 file(s) scanned, 0 path(s) skipped.
+It resulted in 14 error(s), 14 warning(s) and 44 hint(s).
+Can rewrite 0 file(s) with 0 change(s).
+Overall status: ERROR
+Visit https://spotter.steampunk.si/organization/-vI8qeCGT4qioXo_zKQRNg/projects/K2IyUawST3SL3j86IjDThA/scans/A6Jvy5jfRIywY7nLfmsT_Q/ to view this scan result.
+

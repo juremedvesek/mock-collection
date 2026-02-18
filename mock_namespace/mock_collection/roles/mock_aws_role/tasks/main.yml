@@ -22,5 +22,5 @@
         msg: "{{ ansible_all_ipv4_addresses }}"
 
     - name: OS info
-      debug: 
+      ansible.builtin.debug: 
         msg: "{{ ansible_facts['distribution'] }}"
